@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --watch server.js server.js",
-    "start": "next start",
-    "build": "next build"
+    "start": "PORT=$PORT node server.js",
+    "build": "next build",
+    "heroku-postbuild": "npm run build"
   },
   "author": "",
   "license": "ISC",
